@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de-de">
+
+<head>
+	<meta name="generator" content="Hugo 0.55.4" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>krammer  | Home</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <link rel="shortcut icon" type="image/ico" href="/favicon.png">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/f3f29e6f-8077-4bf8-90e0-c3271d52330d.css"/>
+  <link rel="stylesheet" href="https://fliessen-krammer.github.io/lib/semantic.min.css">
+  <link rel="stylesheet" href="https://fliessen-krammer.github.io/styles.css">
+  <script type="text/javascript" src="https://fliessen-krammer.github.io/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="https://fliessen-krammer.github.io/lib/cloudinary-core-shrinkwrap.min.js"></script>
+</head>
+
+<body>
+   
+<header>
+  <div class="ui container ">
+    <div id="logotel">
+      <div class="logow">
+        <a href="/" id="logolink">
+          <img class="logo" src="https://res.cloudinary.com/b-coding/image/fetch/q_100/https://agrimont.github.io" />
+        </a>
+        <div id="langselmobile">
+          
+        </div>
+      </div>
+      <div>
+        <div id="langsel">
+          
+        </div>
+        <div class="adrtel">
+          <div>
+            <img src="https://res.cloudinary.com/b-coding/image/fetch/q_100/https://agrimont.github.io" />
+            <div></div>
+          </div>
+          <div>
+            <img src="https://res.cloudinary.com/b-coding/image/fetch/q_100/https://agrimont.github.io" />
+            <div></div>
+          </div>
+          <div>
+            <img src="https://res.cloudinary.com/b-coding/image/fetch/q_100/https://agrimont.github.io" />
+            <div></div>
+          </div>
+          <div class="headermenuitem green">
+            <a href="">
+                
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="headermenuw">
+      <div id="headermenumobil" class="mobinit ui container">
+          
+      </div>
+      <div id="headermenu" class=" ui container">
+        <div>
+          
+        </div>
+        <div class="headermenuitem green">
+          <a href="">
+              
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="mnt">
+      <button class="ui basic icon button" id="mntbt">
+        <i class="bars icon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+  <main role="main">
+    
+
+
+
+<div id="home">
+  <div class="wgrey">
+    <div id="slidercontainer">
+      <ul id="slider">
+        
+      </ul>
+    </div>
+  </div>
+  <div class="ui container">
+    <div id="icons">
+      
+    </div>
+  </div>
+  <div class="ui container">
+    
+  </div>
+  <div class="wgrey">
+    <div class="ui container">
+      
+    </div>
+  </div>
+  <div class="ui container">
+      
+    </div>
+</div>
+
+  </main>
+  
+<footer class="ui container fluid home">
+  <div class="footermenu ui container">
+     
+    <a href="/datenschutz/" title="Datenschutz">Datenschutz</a>
+    
+    <a href="/impressum/" title="Impressum">Impressum</a>
+    
+    <a href="/haftungsausschluss/" title="Haftungsausschluss">Haftungsausschluss</a>
+    
+  </div>
+</footer>
+
+  <script type="text/javascript" src="https://fliessen-krammer.github.io/lib/semantic.min.js"></script>
+  <script type="text/javascript" src="https://fliessen-krammer.github.io/lib/slippry.min.js"></script>
+  <link rel="stylesheet" href="https://fliessen-krammer.github.io/lib/slippry.min.css">
+  <script type="text/javascript">
+    $(function () {
+      $('#slider').slippry({
+        
+        slippryWrapper: '<div class="sy-box topslider" />', 
+        elements: 'li', 
+
+        
+        adaptiveHeight: false, 
+        captions: false,
+        loop: true,
+        
+        pager: false,
+        start: 1,
+        
+        slideMargin: 0, 
+        useCSS: true,
+        transition: 'fade',
+        pause: 6000,
+        speed: 650,
+        
+        autoDirection: 'next'
+      });
+      $('.ui.embed').embed();
+      $('.sub-menu').each(function(idx,el){
+        $(el).css('top',$('header').height());
+      });
+      $('#mntbt').click(function () {
+        if ($('#headermenumobil').hasClass('mobvis')) {
+          $('#headermenumobil').removeClass('mobvis');
+          $('#mntbt i').addClass('bars');
+          $('#mntbt i').removeClass('remove');
+        } else {
+          $('#headermenumobil').addClass('mobvis');
+          $('#mntbt i').removeClass('bars');
+          $('#mntbt i').addClass('remove');
+        }
+
+      });
+      $('.morebutton.detail').click(function () {
+        var target=$(this).attr('data-target');
+        if ($('#'+target).hasClass('small')){
+          $('#'+target).addClass('big');
+          $('#'+target).removeClass('small');
+          $(this).find('.txt').text('schliessen');
+        } else{
+          $('#'+target).addClass('small');
+          $('#'+target).removeClass('big');
+          $(this).find('.txt').text('öffnen');
+        }
+        if ($('#headermenu').hasClass('mobvis')) {
+          $('#headermenu').removeClass('mobvis');
+        } else {
+          $('#headermenu').addClass('mobvis');
+        }
+      });
+      $('.sech').click(function () {
+        if ($(this).parent().hasClass('open')){
+          $(this).parent().removeClass('open');
+          $(this).parent().addClass('closed');
+        }else{
+          $(this).parent().removeClass('closed');
+          $(this).parent().addClass('open');
+        }
+        
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    var cl = cloudinary.Cloudinary.new({cloud_name: "b-coding"}); 
+    cl.responsive();
+</script>
+</body>
+
+</html>
