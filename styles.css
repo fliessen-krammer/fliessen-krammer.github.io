@@ -53,8 +53,8 @@ header .logo {
 }
 @media (max-width: 720px) {
   header .logo {
-    height: 60px;
-    margin: 0 0 2rem 0;
+    height: 40px;
+    margin: 0 0 1rem 0;
   }
 }
 header #headermenu {
@@ -333,6 +333,15 @@ footer .column.links ul li a {
   font-size: 1.3rem;
   font-weight: bold;
   color: #000066;
+}
+@media (max-width: 720px) {
+  #home #about {
+    padding: 2rem;
+  }
+  #home #about .column:last-child {
+    min-height: 30vh!important;
+    background-position-x: center;
+  }
 }
 #home #slidercontainer {
   margin: 0 0 1rem;

@@ -58,8 +58,8 @@ header{
     height:50px;
     margin:-5px 0;
     @media (max-width: 720px){
-      height:60px;
-      margin:0 0 2rem 0;
+      height:40px;
+      margin:0 0 1rem 0;
     }
   }
   #headermenu{
@@ -345,6 +345,15 @@ footer{
         font-size:1.3rem;
         font-weight:bold;
         color:@blue;
+      }
+    }
+    @media (max-width: 720px){
+      padding:2rem;
+      .column{
+        &:last-child{
+          min-height:30vh!important;
+          background-position-x: center;
+        }
       }
     }
   }
