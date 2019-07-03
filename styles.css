@@ -179,6 +179,13 @@ header #headermenumobil {
 .headermenuitem:hover .sub-menu {
   height: auto;
 }
+.imggal .gimg {
+  cursor: pointer;
+  padding-top: 100%;
+}
+.imggal .gimg.h {
+  padding-top: calc(210%);
+}
 footer {
   display: block;
   background: #e1e8ec;
@@ -480,6 +487,60 @@ footer .column.links ul li a {
 }
 .nopadding {
   padding: 0!important;
+}
+.subHeader {
+  position: relative;
+  min-height: 15vh;
+  margin: 4rem 0 2rem 0;
+  padding: 2rem;
+}
+@media (max-width: 720px) {
+  .subHeader {
+    margin: 2rem 0 1rem 0;
+    padding: 1rem;
+  }
+}
+.subHeader .contentWithSubtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.subHeader .contentWithSubtitle h2 {
+  color: #e1e8ec;
+  letter-spacing: 0.1em;
+  font-size: 2.5rem;
+  text-align: right;
+  padding-left: 3rem;
+}
+@media (max-width: 720px) {
+  .subHeader .contentWithSubtitle {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .subHeader .contentWithSubtitle h2 {
+    font-size: 2rem;
+    line-height: 1.3em;
+    margin-top: -2.5rem;
+  }
+  .subHeader .contentWithSubtitle h2 p {
+    line-height: 1.2em;
+  }
+}
+.subHeader h1 {
+  margin: 0 0 2rem 0;
+  color: #000066;
+}
+.subHeader .fl {
+  left: 0;
+  top: 0;
+  width: 15vh;
+  height: 15vh;
+  z-index: 1;
+  transform: scaleX(-1) scaleY(1);
+}
+.subpage.referenzen #rgal {
+  padding: 2rem 0;
 }
 .subpage.kontakt .phc {
   height: 40vh!important;

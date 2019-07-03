@@ -265,6 +265,32 @@
         
         autoDirection: 'next'
       });
+      $('.imggal .gimg').click(function (el) {
+        var mid = el.currentTarget.dataset.modal;
+        var idx = el.currentTarget.dataset.idx;
+        $('#modal_' + mid).modal({ inverted: true }).modal('show');
+        $('#gal_' + mid).slippry({
+          
+          slippryWrapper: '<div class="sy-box portfolio-slider" />', 
+
+          
+          adaptiveHeight: true, 
+          start: idx + 1, 
+          loop: true, 
+          captionsSrc: 'li',
+          captions: 'custom', 
+          captionsEl: '.external-captions',
+
+          
+          transition: 'horizontal', 
+          easing: 'linear', 
+          continuous: true,
+
+          
+          auto: true,
+          pager: false,
+        });
+      });
       $('.ui.embed').embed();
       $('.sub-menu').each(function(idx,el){
         $(el).css('top',$('header').height());
@@ -306,7 +332,6 @@
           $(this).parent().removeClass('closed');
           $(this).parent().addClass('open');
         }
-        
       });
     });
   </script>
