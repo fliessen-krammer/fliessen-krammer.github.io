@@ -186,6 +186,9 @@ header #headermenumobil {
 .imggal .gimg.h {
   padding-top: calc(210%);
 }
+.imggal .gimg.w {
+  padding-top: calc(65.6%);
+}
 footer {
   display: block;
   background: #e1e8ec;
