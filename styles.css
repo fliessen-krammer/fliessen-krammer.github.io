@@ -545,6 +545,63 @@ footer .column.links ul li a {
 .subpage.referenzen #rgal {
   padding: 2rem 0;
 }
+.subpage.leistungen .service {
+  margin: 13rem 0;
+}
+@media (max-width: 720px) {
+  .subpage.leistungen .service {
+    margin: 5rem 0;
+  }
+}
+.subpage.leistungen .service .column.center {
+  margin: -8rem auto;
+}
+.subpage.leistungen .service .left,
+.subpage.leistungen .service .right {
+  padding: 2rem 4rem;
+}
+.subpage.leistungen .service .left div,
+.subpage.leistungen .service .right div {
+  text-align: justify;
+}
+.subpage.leistungen .service .left h3,
+.subpage.leistungen .service .right h3 {
+  color: #000066;
+}
+@media (max-width: 720px) {
+  .subpage.leistungen .service .left h3,
+  .subpage.leistungen .service .right h3 {
+    text-align: center!important;
+  }
+}
+.subpage.leistungen .service .column.left h3 {
+  text-align: right;
+}
+.subpage.leistungen .lbereiche {
+  padding: 4rem 2rem;
+}
+.subpage.leistungen .lbereiche img {
+  max-width: 100%;
+}
+.subpage.leistungen .lbereiche h2 {
+  text-align: center;
+  color: #000066;
+  margin: 0 0 3rem 0;
+}
+.subpage.leistungen .lbereiche h3 {
+  text-align: center;
+  color: #000066;
+  margin: 1rem 0;
+}
+.subpage.leistungen .lbereiche ul {
+  padding: 0;
+}
+.subpage.leistungen .lbereiche ul li {
+  margin-left: 1em;
+}
+.subpage.leistungen .lbereiche strong {
+  color: #000066;
+}
 .subpage.kontakt .phc {
   height: 40vh!important;
   padding: 0;

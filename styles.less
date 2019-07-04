@@ -556,10 +556,64 @@ footer{
     transform: scaleX(-1) scaleY(1)
   }
 }
+
 .subpage{
   &.referenzen{
     #rgal{
       padding:2rem 0;
+    }
+  }
+  &.leistungen{
+    .service{
+      margin:13rem 0;
+      @media (max-width: 720px){
+        margin:5rem 0;
+      }
+      .column.center{
+        margin:-8rem auto;
+      }
+      .left,.right{
+        div{
+          text-align: justify;
+        }
+        padding:2rem 4rem;
+        h3{
+          color:@blue;
+          @media (max-width: 720px){
+            text-align:center!important;
+          }
+        }
+      }
+      .column.left{
+        h3{
+          text-align:right;
+        }
+      }
+    }
+    .lbereiche{
+      padding:4rem 2rem;
+      img{
+        max-width:100%;
+      }
+      h2{
+        text-align:center;
+        color:@blue;
+        margin: 0 0 3rem 0;
+      }
+      h3{
+        text-align: center;
+        color:@blue;
+        margin:1rem 0;
+      }
+      ul{
+        padding:0;
+        li{
+          margin-left:1em;
+        }
+      }
+      strong{
+        color:@blue;
+      }
     }
   }
   &.kontakt{
