@@ -545,6 +545,30 @@ footer .column.links ul li a {
 .subpage.referenzen #rgal {
   padding: 2rem 0;
 }
+.subpage.about #rgal {
+  padding: 4rem 0;
+}
+.subpage.about strong {
+  color: #000066;
+}
+.subpage.about .lief {
+  text-align: center;
+  padding: 4rem 0;
+}
+.subpage.about h2 {
+  margin: 0 0 2rem 0;
+  color: #000066;
+}
+.subpage.about .logos {
+  margin: 2rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.subpage.about .logos > * {
+  margin: 1rem;
+  padding: 50px 0 0 20%;
+}
 .subpage.leistungen .service {
   margin: 13rem 0;
 }
