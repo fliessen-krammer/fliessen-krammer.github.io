@@ -569,6 +569,15 @@ footer .column.links ul li a {
   margin: 1rem;
   padding: 50px 0 0 20%;
 }
+.subpage.historie .hist .column {
+  text-align: center;
+}
+.subpage.historie .hist .column ul {
+  padding: 0;
+}
+.subpage.historie .hist .column ul li {
+  list-style-type: none;
+}
 .subpage.leistungen .service {
   margin: 13rem 0;
 }
