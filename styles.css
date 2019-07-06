@@ -569,14 +569,33 @@ footer .column.links ul li a {
   margin: 1rem;
   padding: 50px 0 0 20%;
 }
+.subpage.historie .hist {
+  margin: 4rem 0;
+}
+.subpage.historie .hist:nth-child(even) {
+  background: #e1e8ec;
+}
+.subpage.historie .hist h2 {
+  color: #000066;
+}
 .subpage.historie .hist .column {
   text-align: center;
+  min-height: 100px;
 }
 .subpage.historie .hist .column ul {
   padding: 0;
 }
 .subpage.historie .hist .column ul li {
   list-style-type: none;
+}
+@media (max-width: 720px) {
+  .subpage.historie .hist {
+    margin: 2rem 0;
+    padding: 2rem 0!important;
+  }
+  .subpage.historie .hist .column {
+    text-align: left;
+  }
 }
 .subpage.leistungen .service {
   margin: 13rem 0;

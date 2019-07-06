@@ -591,13 +591,28 @@ footer{
   }
   &.historie{
     .hist{
+      &:nth-child(even){
+        background:@grey_light;
+      }
+      h2{
+        color:@blue;
+      }
+      margin:4rem 0;
       .column{
         text-align:center;
+        min-height:100px;
         ul{
           padding:0;
           li{
             list-style-type:none;
           }
+        }
+      }
+      @media (max-width: 720px){
+        margin:2rem 0;
+        padding:2rem 0!important;
+        .column{
+          text-align:left;
         }
       }
     }
