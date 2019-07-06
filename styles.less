@@ -671,101 +671,27 @@ footer{
     }
   }
   &.kontakt{
-    .phc{
-      height:40vh!important;
-      padding:0;
+    #mappadr{
+      position:relative;
+      margin:0 0 4rem 0;
     }
-    footer{
-      margin:0!important;
-    }
-    #mapaddr{
-      padding:0;
-      display:flex;
-      justify-content: space-between;
-      flex-direction: row;
-      align-items: flex-start;
-      > *{
-        width:50%;
-        &:first-child{
-          flex: 0 0 auto;
-          padding:0 0 40% 0;
-          iframe{
-            padding:0;
-            margin:0;
-          }
-        }
+    #adrblock{
+      text-align:center;
+      padding:2rem;
+      background:rgba(255,255,255,0.9);
+      position:absolute;
+      left:55%;
+      top:50%;
+      margin-top:-200px;
+      z-index:9;
+      h2,strong{
+        color:@blue;
       }
-      #klist{
-        padding:2rem;
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        > div{
-          display:flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: flex-start;
-          margin-bottom:2rem;
-          img{
-            margin-right:2rem;
-          }
-        }
-      }
-    }
-    h1{
-      color:@blue;
-      font-weight:normal;
-      font-size:1.5rem;
-      text-align:center;
-      margin:0;
-    }
-    h2{
-      color:@content;
-      font-weight:bold;
-      font-size:2rem;
-      text-align:center;
-      margin:0 0 2rem 0;
-    }
-    .content{
-      padding:4rem  0;
-      text-align:center;
-    }
-    @media (max-width: 720px){
-      #mapaddr{
-        padding:0;
-        display:flex;
-        justify-content: space-between;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        > *{
-          width:100%;
-          &:first-child{
-            flex: 0 0 auto;
-            padding:0 0 50vh 0;
-            iframe{
-              padding:0;
-              margin:0;
-            }
-          }
-        }
-        #klist{
-          padding:2rem;
-          display:flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          > div{
-            display:flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            margin-bottom:2rem;
-            img{
-              margin-right:2rem;
-            }
-          }
-        }
+      @media (max-width: 720px){
+position:relative;
+left:auto;
+top:auto;
+margin:0;
       }
     }
   }
