@@ -76,42 +76,6 @@ header #headermenu {
     flex-wrap: wrap;
   }
 }
-header #headermenumobil {
-  display: none;
-}
-@media (max-width: 720px) {
-  header #headermenumobil {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-height: 0px;
-    overflow: hidden;
-    opacity: 0;
-    transition-property: all;
-    transition-duration: 0.6s;
-    transition-timing-function: ease-in-out;
-  }
-  header #headermenumobil.mobvis {
-    max-height: 1000px;
-    padding: 0.5rem 1rem!important;
-    transition-property: all;
-    transition-duration: 0.6s;
-    transition-timing-function: ease-in-out;
-    opacity: 1;
-  }
-  header #headermenumobil .headermenuitem {
-    width: 50%;
-    color: #000066;
-    border: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    line-height: 2rem;
-    text-align: left;
-  }
-  header #headermenumobil .headermenuitem:nth-child(even) {
-    text-align: right;
-  }
-}
 .headermenuitem {
   flex: 0 1 auto;
   color: #4c4c52 !important;
@@ -126,9 +90,6 @@ header #headermenumobil {
 }
 .headermenuitem a {
   color: #4c4c52 !important;
-}
-.headermenuitem:last-child a span {
-  border: none;
 }
 .headermenuitem:first-child {
   border-left: 1px solid #e1e8ec;
@@ -146,28 +107,33 @@ header #headermenumobil {
     padding: 0 1em;
   }
 }
+.headermenuitem a.hassub {
+  color: #000066 !important;
+}
 .headermenuitem .sub-menu {
   display: flex;
   justify-content: flex-end;
-  height: 0;
+  height: auto;
   overflow: hidden;
   position: absolute;
   right: 0;
   line-height: 1.3em;
   z-index: 99;
-  top: 1.5rem!important;
-  padding-right: 0.5em;
+  top: 1rem!important;
+  padding: 1rem 0.5em 0 0;
+  border-right: 1px solid #4c4c52;
+}
+@media (max-width: 720px) {
+  .headermenuitem .sub-menu {
+    display: none;
+  }
 }
 .headermenuitem .sub-menu .sub-menu-item {
-  margin: 0 0 1rem 2rem;
+  margin: 0 0 0rem 2rem;
 }
 .headermenuitem .sub-menu .sub-menu-item > a {
-  color: #4c4c52;
-  font-weight: bold;
+  color: #000066 !important;
   font-size: 0.95rem;
-}
-.headermenuitem .sub-menu:hover {
-  height: auto;
 }
 .headermenuitem:hover {
   background: #e1e8ec;

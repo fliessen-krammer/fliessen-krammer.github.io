@@ -79,41 +79,6 @@ header{
       flex-wrap: wrap;
     }
   }
-  #headermenumobil{
-    display:none;
-    @media (max-width: 720px){
-      display:flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      
-      max-height:0px;
-      overflow:hidden;
-      opacity: 0;
-      transition-property: all;
-      transition-duration: 0.6s;
-      transition-timing-function: ease-in-out;
-      &.mobvis{
-        max-height:1000px;
-        padding:0.5rem 1rem!important;
-        transition-property: all;
-        transition-duration: 0.6s;
-        transition-timing-function: ease-in-out;
-        opacity: 1;
-      }
-      .headermenuitem{
-        width:50%;
-        color:@blue;
-        border:none;
-        text-transform:uppercase;
-        font-size:1rem;
-        line-height:2rem;
-        text-align:left;
-        &:nth-child(even){
-          text-align:right;
-        }
-      }
-    }
-  }
   
 }
 .headermenuitem{
@@ -126,14 +91,6 @@ header{
   font-size:1.0rem;
   line-height:1rem;
   
-  &:last-child{
-    
-    a{
-      span{
-        border:none;
-      }
-    }
-  }
   &:first-child{
     border-left:1px solid @grey_light;
   }
@@ -150,6 +107,9 @@ header{
         padding: 0 1em;
       }
     }
+    &.hassub{
+      color:@blue!important;
+    }
   }
   padding-bottom:1rem;
   word-wrap: none;
@@ -157,25 +117,25 @@ header{
   position:relative;
   .sub-menu{
     display:flex;
+    @media (max-width: 720px){
+      display:none;
+    }
     justify-content: flex-end;
-    height:0;
+    height:auto;
     overflow:hidden;
     position:absolute;
     right:0;
     line-height:1.3em;
     z-index:99;
-    top:1.5rem!important;
-    padding-right:0.5em;
+    top:1rem!important;
+    padding:1rem 0.5em 0 0;
+    border-right:1px solid @content;
     .sub-menu-item{
       > a{
-        color:@content;
-        font-weight:bold;
+        color:@blue!important;
         font-size:0.95rem;
       }
-      margin:0 0 1rem 2rem;
-    }
-    &:hover{
-      height:auto;
+      margin:0 0 0rem 2rem;
     }
   }
   &:hover{
