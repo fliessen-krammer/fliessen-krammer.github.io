@@ -511,6 +511,26 @@ footer .column.links ul li a {
 .subpage.referenzen #rgal {
   padding: 2rem 0;
 }
+.subpage.referenzen .landinglist {
+  padding: 0 0 4rem 0;
+  position: relative;
+}
+.subpage.referenzen .landinglist h3 {
+  text-align: center;
+}
+.subpage.referenzen .landinglist .deco {
+  width: 100vw;
+  height: 20vh;
+  background: #e1e8ec;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -10vh;
+  z-index: -1;
+}
+.subpage.referenzen .landinglist .img {
+  padding: 200% 0 0 0;
+}
 .subpage.about #rgal {
   padding: 4rem 0;
 }
