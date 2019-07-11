@@ -50,22 +50,30 @@ blockquote{
   background:@grey_light;
 }
 header{
-  background:@grey_light;
+  background:white;
   display:flex;
   justify-content: space-between;
-  padding:2rem 4rem;
+  padding:2rem 0 0 0;
+  flex-direction: column;
+  align-items: center;
   .logo{
-    height:50px;
-    margin:-5px 0;
+    height:80px;
+    margin:-5px 0 2rem 0;
     @media (max-width: 720px){
       height:40px;
       margin:0 0 1rem 0;
     }
   }
+  #headermenuwrapper{
+    background:@blue;
+    width:100vw;
+  }
   #headermenu{
     display:flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    background:@blue;
+    width:100vw;
   }
   @media (max-width: 720px){
     padding:1rem;
@@ -81,71 +89,65 @@ header{
   }
   
 }
+#ebd{
+  font-size:0.7rem;
+  position:absolute;
+  bottom:1rem;
+  right:1rem;
+}
 .headermenuitem{
   flex:0 1 auto;
-  color:@content!important;
+  color:white!important;
   a{
-    color:@content!important;
+    color:white!important;
   }
   text-align:center;
-  font-size:1.0rem;
-  line-height:1rem;
-  
-  &:first-child{
-    border-left:1px solid @grey_light;
-  }
-  &.active{
-    background:@grey_light;
-  }
+  font-size:1.3rem;
+  line-height:3rem;
+
   color:white!important;
   a{
     span{
-      padding: 0 0.5em;
-      border-right:1px solid @content;
+      padding: 0 1rem;
       @media (max-width: 720px){
         border:none;
         padding: 0 1em;
       }
     }
-    &.hassub{
-      color:@blue!important;
-    }
   }
-  padding-bottom:1rem;
   word-wrap: none;
   white-space: nowrap;
   position:relative;
+  z-index:100;
   .sub-menu{
     display:flex;
+    flex-direction:column;
+    background:@blue;
     @media (max-width: 720px){
       display:none;
     }
-    justify-content: flex-end;
-    height:auto;
+    justify-content: flex-start;
+    align-items:flex-start;
+    height:0;
     overflow:hidden;
     position:absolute;
-    right:0;
+    left:0;
     line-height:1.3em;
     z-index:99;
-    top:1rem!important;
-    padding:1rem 0.5em 0 0;
-    border-right:1px solid @content;
+    top:2.5rem!important;
+    padding:0;
     .sub-menu-item{
+      text-align:left;
       > a{
-        color:@blue!important;
-        font-size:0.95rem;
+        color:white!important;
+        font-size:1.3rem;
       }
-      margin:0 0 0rem 2rem;
     }
   }
   &:hover{
-    background:@grey_light;
-    a{
-      color:@blue;
-      text-decoration: none;
-    }
     .sub-menu{
       height:auto;
+      padding:1rem;
     }
   }
 }
@@ -163,6 +165,7 @@ header{
 }
 footer{
   display:block;
+  position:relative;
   background:@grey_light;
   padding:4rem 0;
   .logo{

@@ -42,14 +42,16 @@ blockquote {
   background: #e1e8ec;
 }
 header {
-  background: #e1e8ec;
+  background: white;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 2rem 0 0 0;
+  flex-direction: column;
+  align-items: center;
 }
 header .logo {
-  height: 50px;
-  margin: -5px 0;
+  height: 80px;
+  margin: -5px 0 2rem 0;
 }
 @media (max-width: 720px) {
   header .logo {
@@ -57,10 +59,16 @@ header .logo {
     margin: 0 0 1rem 0;
   }
 }
+header #headermenuwrapper {
+  background: #000066;
+  width: 100vw;
+}
 header #headermenu {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  background: #000066;
+  width: 100vw;
 }
 @media (max-width: 720px) {
   header {
@@ -76,30 +84,28 @@ header #headermenu {
     flex-wrap: wrap;
   }
 }
+#ebd {
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
 .headermenuitem {
   flex: 0 1 auto;
-  color: #4c4c52 !important;
   text-align: center;
-  font-size: 1.0rem;
-  line-height: 1rem;
+  font-size: 1.3rem;
+  line-height: 3rem;
   color: white!important;
-  padding-bottom: 1rem;
   word-wrap: none;
   white-space: nowrap;
   position: relative;
+  z-index: 100;
 }
 .headermenuitem a {
-  color: #4c4c52 !important;
-}
-.headermenuitem:first-child {
-  border-left: 1px solid #e1e8ec;
-}
-.headermenuitem.active {
-  background: #e1e8ec;
+  color: white!important;
 }
 .headermenuitem a span {
-  padding: 0 0.5em;
-  border-right: 1px solid #4c4c52;
+  padding: 0 1rem;
 }
 @media (max-width: 720px) {
   .headermenuitem a span {
@@ -107,21 +113,20 @@ header #headermenu {
     padding: 0 1em;
   }
 }
-.headermenuitem a.hassub {
-  color: #000066 !important;
-}
 .headermenuitem .sub-menu {
   display: flex;
-  justify-content: flex-end;
-  height: auto;
+  flex-direction: column;
+  background: #000066;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 0;
   overflow: hidden;
   position: absolute;
-  right: 0;
+  left: 0;
   line-height: 1.3em;
   z-index: 99;
-  top: 1rem!important;
-  padding: 1rem 0.5em 0 0;
-  border-right: 1px solid #4c4c52;
+  top: 2.5rem!important;
+  padding: 0;
 }
 @media (max-width: 720px) {
   .headermenuitem .sub-menu {
@@ -129,21 +134,15 @@ header #headermenu {
   }
 }
 .headermenuitem .sub-menu .sub-menu-item {
-  margin: 0 0 0rem 2rem;
+  text-align: left;
 }
 .headermenuitem .sub-menu .sub-menu-item > a {
-  color: #000066 !important;
-  font-size: 0.95rem;
-}
-.headermenuitem:hover {
-  background: #e1e8ec;
-}
-.headermenuitem:hover a {
-  color: #000066;
-  text-decoration: none;
+  color: white!important;
+  font-size: 1.3rem;
 }
 .headermenuitem:hover .sub-menu {
   height: auto;
+  padding: 1rem;
 }
 .imggal .gimg {
   cursor: pointer;
@@ -157,6 +156,7 @@ header #headermenu {
 }
 footer {
   display: block;
+  position: relative;
   background: #e1e8ec;
   padding: 4rem 0;
 }
