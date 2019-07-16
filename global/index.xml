@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Globals on krammer</title>
-    <link>https://fliessen-krammer.github.io/global/</link>
+    <link>https://www.fliesen-krammer.de/global/</link>
     <description>Recent content in Globals on krammer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <lastBuildDate>Tue, 10 Jul 2018 18:19:54 +0000</lastBuildDate>
     
-	<atom:link href="https://fliessen-krammer.github.io/global/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.fliesen-krammer.de/global/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Header</title>
-      <link>https://fliessen-krammer.github.io/global/header/</link>
+      <link>https://www.fliesen-krammer.de/global/header/</link>
       <pubDate>Tue, 10 Jul 2018 18:19:54 +0000</pubDate>
       
-      <guid>https://fliessen-krammer.github.io/global/header/</guid>
+      <guid>https://www.fliesen-krammer.de/global/header/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Footer</title>
-      <link>https://fliessen-krammer.github.io/global/footer/</link>
+      <link>https://www.fliesen-krammer.de/global/footer/</link>
       <pubDate>Fri, 25 May 2018 16:23:18 +0200</pubDate>
       
-      <guid>https://fliessen-krammer.github.io/global/footer/</guid>
+      <guid>https://www.fliesen-krammer.de/global/footer/</guid>
       <description></description>
     </item>
     
