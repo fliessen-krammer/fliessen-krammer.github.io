@@ -30,6 +30,12 @@ fields:
           file: 
           path: 
       label: Link
+    - name: datei
+      type: file
+      config:
+        maxSize: 64
+      label: Datei
+      description: Alternativ zu Link
     config:
       min: 
       max: 
