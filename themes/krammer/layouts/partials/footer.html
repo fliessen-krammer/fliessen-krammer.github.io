@@ -30,15 +30,19 @@
             {{range .links}}
               <li>
                 {{if isset . "link"}}
+                {{if ne .link ""}}
                 <a href="{{relref $p .link }}">
                   {{.titel}}
                 </a>
                 {{end}}
+                {{end}}
                   
                 {{if isset . "datei"}}
+                {{if ne .datei ""}}
                 <a href="{{.datei}}" target="_blank">
                 {{.titel}}
               </a>
+              {{end}}
                 {{end}}
               </li>
             {{end}}
