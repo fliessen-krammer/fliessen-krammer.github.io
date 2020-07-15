@@ -1,0 +1,88 @@
+{{ define "main" }}
+{{$p:=.}}
+<div id="home">
+  <div id="slidercontainer">
+    <ul id="slider">
+      {{ range .Params.slider }}
+      <li>
+        <div class="slideritem full" style="background:url({{partial "imgUrl" (dict "img" . "params" "w_2500,f_auto,q_90" )}}) center center no-repeat;">
+        </div>
+      </li>
+      {{end}}
+    </ul>
+    <div  class="fl"></div>
+  </div>
+  {{with .Params.ueber_uns}}
+  <div class="ui container" id="about">
+    <div class="ui two column stackable grid">
+      <div class="column contentl">
+        <h2>{{.untertitel}}</h2>
+        <h1>{{.titel}}</h1>
+        <div>
+          {{.content | safeHTML}}
+        </div>
+        {{with .jahre}}
+        <div class="jahre">
+          <div class="num">
+            <div class="z">
+              {{.zahl}}
+            </div>
+            <div class="l">
+              {{.beschriftung}}
+            </div>
+          </div>
+          <div class="txt">
+            {{.slogan|safeHTML}}
+          </div>
+        </div>
+        {{end}}
+      </div>
+      <div class="column"  style="background:url({{partial "imgUrl" (dict "img" .bild "params" "q_100" )}}) right top no-repeat; background-size:contain; min-height:100px;">
+        
+      </div>
+    </div>
+    <div  class="fl"></div>
+  </div>
+  {{end}}
+  {{with .Params.aktuelle_projekte}}
+  <div id="proj" style="background:url({{partial "imgUrl" (dict "img" .hintergrund "params" "w_2500,f_auto" )}}) center center no-repeat; background-size:cover;">
+    <div class="ui container">
+      <h2>{{.titel}}</h2>
+      <div class="ui four column doubling grid">
+        {{range .projekte}}
+          <div class="column">
+            <a href="{{relref $p .link }}">
+              <div class="img" style="background:url({{partial "imgUrl" (dict "img" .bild "params" "w_400,f_auto" )}}) center center no-repeat; background-size:cover;"></div>
+            </a>
+          </div>
+        {{end}}
+      </div>
+    </div>
+  </div>
+  {{end}}
+  {{with .Params.leistungen}}
+  <div class="ui container" id="leist">
+      <div  class="fl"></div>
+      <div class="ui two column stackable grid">
+        <div class="column contentl">
+          <h3>{{.untertitel}}</h3>
+          <h2>{{.titel}}</h2>
+          <div>{{.content|safeHTML}}</div>
+        </div>
+        <div class="column">
+          <div class="ui two column grid">
+            {{range .bereiche}}
+              <div class="column bereich">
+                  <a href="{{relref $p .link }}">
+                    {{partial "imgTagResponsive" (dict "img" .bild "params" "" )}}
+                    <h3>{{.titel}}</h3>
+                  </a>
+              </div>
+            {{end}}
+          </div>  
+        </div>
+      </div>
+    </div>
+  {{end}}
+</div>
+{{ end }}

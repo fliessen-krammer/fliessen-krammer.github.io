@@ -1,0 +1,69 @@
+---
+label: Historie
+hide_body: true
+fields:
+- name: titel
+  type: text
+  config:
+    required: false
+  label: Titel
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Content
+- name: abschnitte
+  type: field_group_list
+  fields:
+  - name: interne_bezeichnung
+    type: text
+    config:
+      required: false
+    label: Interne Bezeichnung
+    description: Wird NICHT auf der Webseite angezeigt
+  - name: eintrage
+    type: field_group_list
+    fields:
+    - name: nur_bild
+      type: boolean
+      label: Nur Bild?
+    - name: bild
+      type: file
+      config:
+        maxSize: 250
+      label: Bild
+    - name: titel
+      type: text
+      config:
+        required: false
+      label: Titel
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: true
+        schema:
+          format: html-blocks
+      label: Content
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Einträge
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Abschnitte
+- name: seo
+  type: include
+  config: {}
+  template: seo
+  label: SEO
+pages:
+- content/historie.md

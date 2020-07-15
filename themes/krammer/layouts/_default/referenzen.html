@@ -1,0 +1,20 @@
+{{ define "main" }} {{ $p := . }}
+<div class="subpage referenzen ui container">
+  <div class="subHeader">
+    <div class="fl"></div>
+    
+    <div class="contentWithSubtitle">
+      <div>
+          <h1>{{.Params.titel}}</h1>
+        {{.Params.content|safeHTML}}
+      </div>
+      <h2>
+        {{.Params.untertitel|safeHTML}}
+      </h2>
+    </div>
+  </div>
+  <div id="rgal">
+    {{ partial "imgGal.html" . }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,156 @@
+{{if eq .Params.galerie_layout "layout1"}}
+<div class="ui container grid imggal stackable">
+  <div class="eight wide column">
+    {{ range $x,$img := .Params.bilder }} {{if eq $x 0}}
+    <div data-modal="imgg" class="gimg" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+  </div>
+  <div class="eight wide column imggalcol">
+    <div class="ui two column stackable grid">
+    {{ range $x,$img := .Params.bilder }} 
+      {{if gt $x 0}}
+        {{if lt $x 5}}
+          <div class="column">
+            <div data-modal="imgg" data-idx="{{$x}}" class="gimg" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> 
+          </div>
+        {{end}}
+      {{end}}
+    {{end}}
+    </div>
+  </div>
+</div>
+<div class="ui container grid imggal stackable">
+  <div class="four wide column">
+    {{ range $x,$img := .Params.bilder }} {{if eq $x 5}}
+    <div data-modal="imgg" class="gimg h" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+  </div>
+  <div class="eight wide column">
+    {{ range $x,$img := .Params.bilder }} {{if eq $x 6}}
+    <div data-modal="imgg" class="gimg" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+  </div>
+  <div class="four wide column">
+    {{ range $x,$img := .Params.bilder }} {{if eq $x 7}}
+    <div data-modal="imgg" class="gimg h" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+  </div>
+</div>
+<div class="ui container grid imggal doubling stackable">
+    {{ range $x,$img := .Params.bilder }} {{if gt $x 7}}
+  <div class="four wide column">
+    <div data-modal="imgg" class="gimg" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> 
+  </div>
+  {{end}}{{end}}
+</div>
+<div class="ui modal small" id="modal_imgg">
+  <div class="content">
+    <ul id="gal_imgg" class="imggalslider ">
+      {{ range $x,$img := .Params.bilder }}
+      <li>
+        <img style="z-index:2;" src="{{partial "imgUrl" (dict "img" $img "params" "c_scale,h_1000,f_auto" )}} " />
+      </li>
+      {{end}}
+    </ul>
+  </div>
+</div>
+{{end}}
+{{if eq .Params.galerie_layout "layout2"}}
+<div class="ui container grid imggal stackable">
+  <div class="eight wide column">
+    {{ range $x,$img := .Params.bilder }} {{if eq $x 0}}
+    <div data-modal="imgg" class="gimg" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+  </div>
+  <div class="eight wide column imggalcol">
+    <div class="ui two column stackable grid">
+    {{ range $x,$img := .Params.bilder }} 
+      {{if gt $x 0}}
+        {{if lt $x 5}}
+          <div class="column">
+            <div data-modal="imgg" data-idx="{{$x}}" class="gimg" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> 
+          </div>
+        {{end}}
+      {{end}}
+    {{end}}
+    </div>
+  </div>
+</div>
+<div class="ui container grid imggal stackable">
+  <div class="twelve wide column">
+    {{ range $x,$img := .Params.bilder }} {{if eq $x 5}}
+    <div data-modal="imgg" class="gimg w" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+  </div>
+  <div class="four wide column">
+    {{ range $x,$img := .Params.bilder }} {{if eq $x 6}}
+    <div data-modal="imgg" class="gimg h" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+  </div>
+</div>
+<div class="ui container grid imggal two column stackable">
+  {{ range $x,$img := .Params.bilder }} 
+    {{if gt $x 6}}
+      {{if lt $x 9}}
+        <div class="column">
+          <div data-modal="imgg" data-idx="{{$x}}" class="gimg" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> 
+        </div>
+      {{end}}
+    {{end}}
+  {{end}}
+</div>
+<div class="ui container grid imggal doubling stackable">
+    {{ range $x,$img := .Params.bilder }} {{if gt $x 8}}
+  <div class="four wide column">
+    <div data-modal="imgg" class="gimg" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> 
+  </div>
+  {{end}}{{end}}
+</div>
+<div class="ui modal small" id="modal_imgg">
+  <div class="content">
+    <ul id="gal_imgg" class="imggalslider ">
+      {{ range $x,$img := .Params.bilder }}
+      <li>
+        <img style="z-index:2;" src="{{partial "imgUrl" (dict "img" $img "params" "c_scale,h_1000,f_auto" )}} " />
+      </li>
+      {{end}}
+    </ul>
+  </div>
+</div>
+{{end}}
+{{if eq .Params.galerie_layout "layout3"}}
+<div class="ui container grid imggal stackable">
+  <div class="eight wide column">
+    {{ range $x,$img := .Params.bilder }} {{if eq $x 0}}
+    <div data-modal="imgg" class="gimg" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+  </div>
+  <div class="four wide column imggalcol">
+    <div class="ui one column stackable grid">
+    {{ range $x,$img := .Params.bilder }} 
+      {{if gt $x 0}}
+        {{if lt $x 3}}
+          <div class="column">
+            <div data-modal="imgg" data-idx="{{$x}}" class="gimg" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> 
+          </div>
+        {{end}}
+      {{end}}
+    {{end}}
+    </div>
+  </div>
+  <div class="four wide column">
+      {{ range $x,$img := .Params.bilder }} {{if eq $x 3}}
+      <div data-modal="imgg" class="gimg h" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> {{end}}{{end}}
+    </div>
+</div>
+<div class="ui container grid imggal doubling stackable">
+    {{ range $x,$img := .Params.bilder }} {{if gt $x 3}}
+  <div class="four wide column">
+    <div data-modal="imgg" class="gimg" data-idx="{{$x}}" style="background:url({{partial "imgUrl" (dict "img" $img "params" "c_fill,h_1200,w_1200,g_auto,f_auto" )}}) center center no-repeat;background-size:cover"></div> 
+  </div>
+  {{end}}{{end}}
+</div>
+<div class="ui modal small" id="modal_imgg">
+  <div class="content">
+    <ul id="gal_imgg" class="imggalslider ">
+      {{ range $x,$img := .Params.bilder }}
+      <li>
+        <img style="z-index:2;" src="{{partial "imgUrl" (dict "img" $img "params" "c_scale,h_1000,f_auto" )}} " />
+      </li>
+      {{end}}
+    </ul>
+  </div>
+</div>
+{{end}}

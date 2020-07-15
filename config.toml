@@ -1,0 +1,4 @@
+baseURL = "https://www.fliesen-krammer.de"
+languageCode = "de-de"
+theme = "krammer"
+title = "krammer"

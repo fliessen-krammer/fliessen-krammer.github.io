@@ -1,0 +1,37 @@
+{{ define "main" }} {{ $p := . }}
+{{ $events := where .Site.Pages "Section" "news"}}
+<div class="subpage news">
+{{partial "breadcrumb" .}}
+<div class="ui container standard">
+  <div class="newslist">
+  {{ range ($events.ByParam "datum").Reverse }}
+  {{if ne .Params.titel nil}}
+  <div class="event small" id="event_{{md5 .Params.titel}}">
+      <div class="titles">
+        <div>
+            {{with .Params.datum}}
+            <div class="date">
+              {{dateFormat "02.01.2006" .}}
+            </div>
+            {{end}}
+            <h3>{{.Params.titel}}</h3>
+        </div>
+        <div class="morebutton rot detail" data-target="event_{{md5 .Params.titel}}">
+            <div class="iconw"><i class="chevron right icon"></i></div>
+            <div class="txt">öffnen</div>
+        </div>
+      </div>
+      <div class="summary">
+        {{.Params.zusammenfassung | safeHTML}}
+      </div>
+      <div class="content">
+        {{.Content}}
+      </div>
+    </div>
+    {{end}}
+  {{end}}
+
+</div>
+</div>
+</div>
+{{ end }}

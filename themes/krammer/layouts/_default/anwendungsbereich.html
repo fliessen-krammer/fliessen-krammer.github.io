@@ -1,0 +1,56 @@
+{{ define "main" }} {{ $currentPage := . }}
+<div class="subpage ab">
+  <div class="ui container standard">
+    <div class="phc" style="background:url({{partial "imgUrl" (dict "img" .Params.bild_header "params" "c_scale,w_1200,q_90,f_auto" )}}) center center no-repeat;">
+      <div class="content" >
+        <h2>
+            Anwendungsbereich
+        </h2>
+        <h1>
+          {{.Params.title}}
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="ui container">
+    <div id="titlesec">
+      <div>
+        <h2>Anwendungsbereich</h2>
+        <h1>{{.Params.title}}</h1>
+      </div>
+      <div>
+        {{with .Params.icon}}
+        <img src="{{partial "imgUrl" (dict "img" . "params" "c_scale,h_100,q_100,f_auto" )}}">
+        {{end}}
+      </div>
+    </div>
+  </div>
+  <div class="ui container content">
+    {{.Params.content|safeHTML}}
+  </div>
+  <div class="ui container sections">
+    {{range .Params.produkte}}
+      <div class="sec closed">
+        <div class="sech">
+          <i class="ui icon plus"></i><i class="ui icon minus"></i>{{.bezeichnung}}
+        </div>
+        <div class="secc">
+          <div>
+              {{.beschreibung|safeHTML}}
+          </div>
+          <a href="{{ref $currentPage .link }}">
+          <div class="agributton">
+              <div class="iconw">
+                  <i class="icon chevron right"></i>
+              </div>
+              <div class="text">
+                {{.linkbeschriftung}}
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    {{end}}
+  </div>
+</div>
+{{ end }}

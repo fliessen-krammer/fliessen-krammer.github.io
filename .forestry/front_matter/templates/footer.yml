@@ -1,0 +1,62 @@
+---
+label: Footer
+hide_body: true
+fields:
+- name: linkspalten
+  type: field_group_list
+  fields:
+  - name: titel
+    type: text
+    config:
+      required: false
+    label: Titel
+  - name: links
+    type: field_group_list
+    fields:
+    - name: titel
+      type: text
+      config:
+        required: false
+      label: Titel
+    - name: link
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: pages
+          section: seiten
+          file: 
+          path: 
+      label: Link
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Links
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Linkspalten
+- name: linkextern
+  type: field_group_list
+  fields:
+  - name: linktext
+    type: text
+    config:
+      required: false
+    label: linktext
+  - name: dokument
+    type: file
+    config:
+      maxSize: 64
+    label: dokument
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: linkextern
+pages:
+- content/global/footer.md

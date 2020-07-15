@@ -1,0 +1,95 @@
+---
+label: Leistungen
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Titel
+- name: untertitel
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Untertitel
+- type: textarea
+  name: content
+  label: Content
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
+- name: leistungsbereiche
+  type: field_group
+  config: {}
+  fields:
+  - name: titel
+    type: text
+    config:
+      required: false
+    label: Titel
+  - name: bereiche
+    type: field_group_list
+    fields:
+    - name: titel
+      type: text
+      config:
+        required: false
+      label: Titel
+    - name: bild
+      type: file
+      config:
+        maxSize: 250
+      label: Bild
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: true
+        schema:
+          format: html-blocks
+      label: Content
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Bereiche
+  label: Leistungsbereiche
+- name: wir_bieten
+  type: field_group
+  config: {}
+  fields:
+  - name: bereiche
+    type: field_group_list
+    fields:
+    - name: titel
+      type: text
+      config:
+        required: false
+      label: Titel
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: true
+        schema:
+          format: html-blocks
+      label: Content
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Bereiche
+  - name: bild
+    type: file
+    config:
+      maxSize: 250
+    label: Bild
+  label: Wir bieten
+- type: text
+  name: seo_description
+  label: seo_description

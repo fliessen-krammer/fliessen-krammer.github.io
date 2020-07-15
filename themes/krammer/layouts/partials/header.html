@@ -1,0 +1,30 @@
+{{ $t := .Site.GetPage "header.md" }} {{ $currentPage := . }}{{$site := .Site}}
+<header>
+    <div class="logow">
+      <a href="/" id="logolink">
+        <img class="logo" src="{{partial "imgUrl" (dict "img" $t.Params.logo "params" "q_100" )}}" />
+      </a>
+    </div>
+      <div id="headermenuwrapper">
+          <div id="headermenu" class="ui container">
+        {{ range .Site.Menus.main }}
+            <div class="headermenuitem {{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}active{{ end }}
+            {{if eq .Title "Produkte"}}{{ range $site.Menus.produkte }}{{ if or ($currentPage.IsMenuCurrent "produkte" .) ($currentPage.HasMenuCurrent "produkte" .) }}active{{ end }}{{end}}{{end}}
+            ">
+                <a href="{{ .URL }}" title="{{ .Title }}" class="{{ if .HasChildren }}hassub{{end}}">
+                    <span>{{ .Name | safeHTML }}</span>
+                </a>
+                {{ if .HasChildren }}
+                <div class="sub-menu">
+                      {{ range .Children }}
+                        <div class="sub-menu-item {{ if $currentPage.IsMenuCurrent "produkte" . }}active{{ end }}">
+                            <a href="{{ .URL }}" title="{{ .Title }}">{{replaceRE "\\[.+\\]" "" .Name}}</a>
+                        </div>
+                    {{ end }}
+                </div>
+                {{end}}
+            </div>
+        {{ end }}
+        </div>
+      </div>
+</header>

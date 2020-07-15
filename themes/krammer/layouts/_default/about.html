@@ -1,0 +1,35 @@
+{{ define "main" }} {{ $p := . }}
+
+<div class="subpage about">
+  <div class="ui container">
+    <div class="subHeader">
+      <div class="fl"></div>
+      
+      <div class="contentWithSubtitle">
+        <div>
+            <h1>{{.Params.title}}</h1>
+          {{.Params.content|safeHTML}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wgrey">
+    <div class="ui container">
+        <div id="rgal">
+            {{ partial "imgGal.html" . }}
+          </div>
+    </div>
+  </div>
+  {{with .Params.lieferanten}}
+  <div class="ui container lief">
+    <h2>{{.titel}}</h2>
+    <div>{{.content|safeHTML}}</div>
+    <div class="logos">
+      {{range .logos}}
+      <div style="background:url({{partial "imgUrl" (dict "img" . "params" "f_auto" )}}) center center no-repeat;background-size:contain"></div>
+      {{end}}
+    </div>
+  </div>
+  {{end}}
+</div>
+{{ end }}

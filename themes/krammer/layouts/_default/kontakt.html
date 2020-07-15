@@ -1,0 +1,23 @@
+{{ define "main" }} {{ $p := . }}
+
+<div class="subpage kontakt">
+  <div class="ui container">
+    <div class="subHeader">
+      <div class="fl"></div>
+      
+      <div class="contentWithSubtitle">
+        <div>
+            <h1>{{.Params.title}}</h1>
+          {{.Params.content|safeHTML}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="mappadr" class="ui container">
+      <div id="adrblock">
+          {{.Params.adresse|safeHTML}}
+        </div>
+  <div class="ui 16:9 embed autoplay" data-url="https://www.openstreetmap.org/export/embed.html?bbox=11.052246093750002%2C48.33890767080275%2C12.875976562500002%2C49.2032427441791&amp;layer=mapnik&amp;marker=48.77293517056508%2C11.964111328125"></div>
+</div>
+</div>
+{{ end }}

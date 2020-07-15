@@ -1,0 +1,43 @@
+{{ $header := .Site.GetPage "header.md" }}
+{{ $footer := .Site.GetPage "footer.md" }}
+{{$p:=.}}
+<footer class="ui container fluid">
+  <div class=" ui container">
+    <div class="ui five column doubling stackable grid">
+      <div class="column adr">
+        <a href="/">
+          <img class="logo" src="{{partial "imgUrl" (dict "img" $header.Params.logo "params" "q_100" )}}" /> 
+        </a>
+        <ul>
+          <li>
+              <img src="{{partial "imgUrl" (dict "img" $header.Params.icon_adresse "params" "c_scale,w_20,q_100" )}}" /> 
+              {{$header.Params.adresse|safeHTML}}
+          </li>
+          <li>
+              <img src="{{partial "imgUrl" (dict "img" $header.Params.icon_tel "params" "w_20,q_100" )}}" /> 
+              {{$header.Params.tel|safeHTML}}
+          </li>
+          <li>
+              <img src="{{partial "imgUrl" (dict "img" $header.Params.icon_email "params" "w_20,q_100" )}}" /> 
+              {{$header.Params.email|safeHTML}}
+          </li>
+        </ul>
+      </div>
+      {{range $footer.Params.linkspalten}}
+        <div class="column links">
+          <h4>{{.titel}}</h4>
+          <ul>
+            {{range .links}}
+              <li>
+                  <a href="{{ref $p .link }}">
+                    {{.titel}}
+                  </a>
+              </li>
+            {{end}}
+          </ul>
+        </div>
+      {{end}}
+    </div>
+  </div>
+  <div id="ebd"><a href="http://elvirabeck-design.de" target="_blank">elvira.beck | design</a></div>
+</footer>

@@ -1,0 +1,63 @@
+{{ define "main" }} {{ $p := . }}
+
+<div class="subpage leistungen">
+  <div class="ui container">
+    <div class="subHeader">
+      <div class="fl"></div>
+      
+      <div class="contentWithSubtitle">
+        <div>
+            <h1>{{.Params.title}}</h1>
+          {{.Params.content|safeHTML}}
+        </div>
+        <h2>
+          {{.Params.untertitel|safeHTML}}
+        </h2>
+      </div>
+    </div>
+  </div>
+  {{with .Params.leistungsbereiche}}
+  <div class="wgrey">
+    <div class="ui container lbereiche">
+      <h2>{{.titel}}</h2>
+      <div class="ui four column doubling stackable grid">
+        {{range .bereiche}}
+          <div class="column">
+              {{partial "imgTagResponsive" (dict "img" .bild "params" "" )}}
+              <h3>{{.titel}}</h3>
+              {{.content|safeHTML}}
+          </div>
+        {{end}}
+      </div>
+    </div>
+  </div>
+  {{end}}
+  {{with .Params.wir_bieten}}
+  <div class="wgrey service">
+    <div class="ui container">
+      <div class="ui three column stackable grid">
+        <div class="column left">
+          {{ range $x,$d := .bereiche }} 
+            {{if lt $x 2}}
+              <h3>{{$d.titel}}</h3>
+              <div>{{$d.content|safeHTML}}</div>
+            {{end}}
+          {{end}}
+        </div>
+        <div class="column center large screen only" style="background:url({{partial "imgUrl" (dict "img" .bild "params" "f_auto" )}}) center center no-repeat;background-size:cover">
+          &nbsp;
+        </div>
+        <div class="column right">
+            {{ range $x,$d := .bereiche }} 
+            {{if gt $x 1}}
+              <h3>{{$d.titel}}</h3>
+              <div>{{$d.content|safeHTML}}</div>
+            {{end}}
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{end}}
+</div>
+{{ end }}

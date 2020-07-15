@@ -1,0 +1,61 @@
+{{ define "main" }} {{ $p := . }}
+{{ $events := where .Site.Pages "Section" "events"}}
+<div class="subpage events">
+{{partial "breadcrumb" .}}
+<div class="ui container standard">
+    {{with .Params.header}}
+  <div class=" c50i50" style="background:url({{partial "imgUrl" (dict "img" .bild "params" "c_scale,f_auto,w_800" )}}) center center no-repeat; background-size:cover;">
+    <div class="content_no_even_odd">
+        <h4>{{.titel.untertitel}}</h4>
+        <h3 {{ printf "style=color:%s" (partial "colorextr" .titel.textfarbe.farbe) | safeHTMLAttr }}>
+          {{.titel.titel}}
+        </h3>
+        <div {{ printf "style=color:%s" (partial "colorextr" .content.textfarbe.farbe) | safeHTMLAttr }}>
+          {{.content.content|safeHTML}}
+        </div>
+        {{if eq .link_button_qm true}}
+        <a class="morebutton" href="{{relref $p .link }}">
+            <div class="iconw"><i class="chevron right icon"></i></div>
+            <div class="txt">{{.beschriftung_link_button}}</div>
+        </a>
+        {{end}}
+    </div>
+  </div>
+  {{end}}
+  <div class="months">
+  {{ range ($events.GroupByParam "monat") }}
+  <h2>{{partial "monthDE" (dateFormat "January 2006" .Key )}}</h2>
+  <div class="elements">
+  {{ range .Pages }}
+    {{if ne .Params.monat nil}}
+    {{if gt (dateFormat "2006-01" .Params.monat ) (now.Format "2006-01")}}
+    <div class="event small" id="event_{{md5 .Params.title}}">
+      <div class="titles">
+        <div>
+            <h3>{{.Params.title}}</h3>
+            {{with .Params.ort_und_zeitangabe|safeHTML}}
+              <h4>{{.}}</h4>
+            {{end}}
+        </div>
+        <div class="morebutton rot detail" data-target="event_{{md5 .Params.title}}">
+            <div class="iconw"><i class="chevron right icon"></i></div>
+            <div class="txt">öffnen</div>
+        </div>
+      </div>
+      <div class="summary">
+        {{.Params.zusammenfassung | safeHTML}}
+      </div>
+      <div class="content">
+        {{.Content}}
+      </div>
+    </div>
+    {{end}}
+    {{end}}
+  {{ end }}
+  {{end}}
+
+</div>
+</div>
+</div>
+</div>
+{{ end }}

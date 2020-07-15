@@ -1,0 +1,36 @@
+{{ define "main" }} {{ $p := . }}
+
+<div class="subpage historie">
+  <div class="ui container">
+    <div class="subHeader">
+      <div class="fl"></div>
+      
+      <div class="contentWithSubtitle">
+        <div>
+            <h1>{{.Params.titel}}</h1>
+          {{.Params.content|safeHTML}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{range .Params.abschnitte}}
+  <div class="hist">
+    <div class="ui container">
+      <div class="ui four column stackable grid">
+        {{range .eintrage}}
+            {{if eq .nur_bild true}}
+          <div class="column" style="background:url({{partial "imgUrl" (dict "img" .bild "params" "f_auto" )}}) center center no-repeat;background-size:contain">
+            </div>
+            {{else}}
+            <div class="column">
+              <h2>{{.titel}}</h2>
+              {{.content|safeHTML}}
+            </div>
+            {{end}}
+        {{end}}
+      </div>
+    </div>
+  </div>
+  {{end}}
+</div>
+{{ end }}

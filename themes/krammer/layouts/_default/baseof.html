@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default " de " }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{replaceRE "\\[.+\\]" "" .}}{{ end }}{{ end }}</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <link rel="shortcut icon" type="image/ico" href="/favicon.png">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <link rel="stylesheet" href="{{ $.Site.BaseURL }}/lib/semantic.min.css">
+  <link rel="stylesheet" href="{{ $.Site.BaseURL }}/styles.css">
+  <script type="text/javascript" src="{{ $.Site.BaseURL }}/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ $.Site.BaseURL }}/lib/cloudinary-core-shrinkwrap.min.js"></script>
+</head>
+
+<body>
+  {{ partial "header.html" . }}
+  <main role="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <script type="text/javascript" src="{{ $.Site.BaseURL }}/lib/semantic.min.js"></script>
+  <script type="text/javascript" src="{{ $.Site.BaseURL }}/lib/slippry.min.js"></script>
+  <link rel="stylesheet" href="{{ $.Site.BaseURL }}/lib/slippry.min.css">
+  <script type="text/javascript">
+    $(function () {
+      $('#slider').slippry({
+        // general elements & wrapper
+        slippryWrapper: '<div class="sy-box topslider" />', // wrapper to wrap everything, including pager
+        elements: 'li', // elments cointaining slide content
+
+        // options
+        adaptiveHeight: false, // height of the sliders adapts to current 
+        captions: false,
+        loop: true,
+        // pager
+        pager: false,
+        start: 1,
+        // transitions
+        slideMargin: 0, // spacing between slides (in %)
+        useCSS: true,
+        transition: 'fade',
+        pause: 6000,
+        speed: 650,
+        // slideshow
+        autoDirection: 'next'
+      });
+      $('.imggal .gimg').click(function (el) {
+        var mid = el.currentTarget.dataset.modal;
+        var idx = el.currentTarget.dataset.idx;
+        $('#modal_' + mid).modal({ inverted: true }).modal('show');
+        $('#gal_' + mid).slippry({
+          // general elements & wrapper
+          slippryWrapper: '<div class="sy-box portfolio-slider" />', // wrapper to wrap everything, including pager
+
+          // options
+          adaptiveHeight: true, // height of the sliders adapts to current slide
+          start: idx + 1, // num (starting from 1), random
+          loop: true, // first -> last & last -> first arrows
+          captionsSrc: 'li',
+          captions: 'custom', // Position: overlay, below, custom, false
+          captionsEl: '.external-captions',
+
+          // transitions
+          transition: 'horizontal', // fade, horizontal, kenburns, false
+          easing: 'linear', // easing to use in the animation [(see... [jquery www])]
+          continuous: true,
+
+          // slideshow
+          auto: true,
+          pager: false,
+        });
+      });
+      $('.ui.embed').embed();
+      $('.sub-menu').each(function(idx,el){
+        $(el).css('top',$('header').height());
+      });
+      $('#mntbt').click(function () {
+        if ($('#headermenumobil').hasClass('mobvis')) {
+          $('#headermenumobil').removeClass('mobvis');
+          $('#mntbt i').addClass('bars');
+          $('#mntbt i').removeClass('remove');
+        } else {
+          $('#headermenumobil').addClass('mobvis');
+          $('#mntbt i').removeClass('bars');
+          $('#mntbt i').addClass('remove');
+        }
+
+      });
+      $('.morebutton.detail').click(function () {
+        var target=$(this).attr('data-target');
+        if ($('#'+target).hasClass('small')){
+          $('#'+target).addClass('big');
+          $('#'+target).removeClass('small');
+          $(this).find('.txt').text('schliessen');
+        } else{
+          $('#'+target).addClass('small');
+          $('#'+target).removeClass('big');
+          $(this).find('.txt').text('öffnen');
+        }
+        if ($('#headermenu').hasClass('mobvis')) {
+          $('#headermenu').removeClass('mobvis');
+        } else {
+          $('#headermenu').addClass('mobvis');
+        }
+      });
+      $('.sech').click(function () {
+        if ($(this).parent().hasClass('open')){
+          $(this).parent().removeClass('open');
+          $(this).parent().addClass('closed');
+        }else{
+          $(this).parent().removeClass('closed');
+          $(this).parent().addClass('open');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    var cl = cloudinary.Cloudinary.new({cloud_name: "b-coding"}); 
+    cl.responsive();
+</script>
+</body>
+
+</html>

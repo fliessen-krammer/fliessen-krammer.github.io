@@ -1,0 +1,66 @@
+{{ define "main" }} {{ $currentPage := . }}
+<div class="subpage products">
+  <div class="phc" style="background:url({{partial "imgUrl" (dict "img" .Params.bild_header "params" "c_scale,w_2500,q_90,f_auto" )}}) right center no-repeat;">
+    <div class="ui container standard">
+      <div class="content" >
+        <h1>
+            Produkte
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="ui container">
+    <div id="pgroups">
+      {{range .Params.produktgruppen}}
+        <div class="pgroup">
+          <h2>{{.produktgruppe}}</h2>
+          <div class="sections">
+            {{with .beschreibung}}
+              <div class="sec closed">
+                <div class="sech">
+                  <i class="ui icon plus"></i><i class="ui icon minus"></i>{{.beschriftung}}
+                </div>
+                <div class="secc">
+                  {{.content|safeHTML}}
+                </div>
+              </div>
+            {{end}}
+            {{with .produktliste}}
+              <div class="sec closed">
+                <div class="sech">
+                  <i class="ui icon plus"></i><i class="ui icon minus"></i>{{.beschriftung}}
+                </div>
+                <div class="secc">
+                  <ul>
+                    {{range .produktlink}}
+                      <li><a href="{{relref $currentPage .link}}">{{.produktname}}</a></li>
+                    {{end}}
+                  </ul>
+                </div>
+              </div>
+            {{end}}
+            {{with .anwendungsbereiche}}
+              <div class="sec closed">
+                <div class="sech">
+                  <i class="ui icon plus"></i><i class="ui icon minus"></i>{{.beschriftung}}
+                </div>
+                <div class="secc">
+                  {{range .bereiche}}
+                    <div class="awsec">
+                      <div class="icon" style="background:url({{partial "imgUrl" (dict "img" .icon "params" "q_100" )}}) center center no-repeat;"/></div>
+                      <div class="content">
+                        <h3>{{.titel}}</h3>
+                        {{.content|safeHTML}}
+                      </div>
+                    </div>
+                  {{end}}
+                </div>
+              </div>
+            {{end}}
+          </div>
+        </div>
+      {{end}}
+    </div>
+  </div>
+</div>
+{{ end }}

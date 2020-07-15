@@ -1,0 +1,34 @@
+{{ define "main" }} {{ $p := . }}
+<div class="subpage referenzen ">
+  <div class="ui container">
+  <div class="subHeader">
+    <div class="fl"></div>
+    
+    <div class="contentWithSubtitle">
+      <div>
+          <h1>{{.Params.title}}</h1>
+        {{.Params.content|safeHTML}}
+      </div>
+      <h2>
+        {{.Params.untertitel|safeHTML}}
+      </h2>
+    </div>
+  </div>
+</div>
+  <div class="landinglist">
+    <div class="ui container">
+      <div class="ui four column doubling stackable grid">
+        {{range .Params.bereiche}}
+          <div class="column">
+            <a href="{{relref $p .link }}">
+              <h3>{{.titel}}</h3>
+              <div class="img" style="background:url({{partial "imgUrl" (dict "img" .bild "params" "f_auto" )}}) center center no-repeat;background-size:cover"></div>
+            </a>
+          </div>
+        {{end}}
+      </div>
+    </div>
+    <div class="deco"></div>
+  </div>
+</div>
+{{ end }}

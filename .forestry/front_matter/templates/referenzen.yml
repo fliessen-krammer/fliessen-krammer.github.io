@@ -1,0 +1,51 @@
+---
+label: Referenzen
+hide_body: true
+fields:
+- name: titel
+  type: text
+  config:
+    required: false
+  label: Titel
+- name: untertitel
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Untertitel
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Content
+- name: galerie_layout
+  type: select
+  default: layout1
+  config:
+    required: false
+    options:
+    - layout1
+    - layout2
+    - layout3
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Galerie-Layout
+- name: bilder
+  type: image_gallery
+  config: {}
+  label: Bilder
+pages:
+- content/badsanierung.md
+- content/industrie-gewerbe.md
+- content/terrasse-garten-co.md
+- content/wohnräume.md
