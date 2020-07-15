@@ -43,7 +43,7 @@ titel = "Historie"
 [[linkspalten]]
 titel = "Rechtliches"
 [[linkspalten.links]]
-link = []
+link = "impressum.md"
 titel = "Kundenfragebogen"
 [[linkspalten.links]]
 link = "impressum.md"

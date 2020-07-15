@@ -1,6 +1,6 @@
 {{ $header := .Site.GetPage "header.md" }}
 {{ $footer := .Site.GetPage "footer.md" }}
-{{$p:=.}}
+{{ $p:= . }}
 <footer class="ui container fluid">
   <div class=" ui container">
     <div class="ui five column doubling stackable grid">
@@ -29,9 +29,17 @@
           <ul>
             {{range .links}}
               <li>
-                  <a href="{{ref $p .link }}">
-                    {{.titel}}
-                  </a>
+                {{if isset . "link"}}
+                <a href="{{relref $p .link }}">
+                  {{.titel}}
+                </a>
+                {{end}}
+                  
+                {{if isset . "datei"}}
+                <a href="{{.datei}}" target="_blank">
+                {{.titel}}
+              </a>
+                {{end}}
               </li>
             {{end}}
           </ul>
