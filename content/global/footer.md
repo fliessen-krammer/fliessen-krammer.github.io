@@ -3,7 +3,7 @@ date = "2018-05-25T16:23:18+02:00"
 title = "Footer"
 [[linkextern]]
 dokument = "/uploads/2020/07/14/kundenbogen.pdf"
-linktext = "Kundenfragebogen"
+linktext = "Kundenfragebogen / Datenschutz"
 [[linkspalten]]
 titel = "Produkte & Leistungen"
 [[linkspalten.links]]
