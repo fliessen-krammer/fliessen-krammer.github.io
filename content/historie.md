@@ -99,6 +99,11 @@ titel = ""
 interne_bezeichnung = ""
 [[abschnitte.eintrage]]
 bild = ""
+content = "<p>Planung für neues Betriebsgelände</p><p><br><br></p>"
+nur_bild = false
+titel = "2020"
+[[abschnitte.eintrage]]
+bild = ""
 content = "<p>Beginn vom Meisterlehrgang von Sohn Jonas Krammer</p>"
 nur_bild = false
 titel = "September 2022"
