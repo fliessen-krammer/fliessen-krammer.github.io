@@ -99,6 +99,11 @@ titel = ""
 interne_bezeichnung = ""
 [[abschnitte.eintrage]]
 bild = ""
+content = "<p>Beginn vom Meisterlehrgang von Sohn Jonas Krammer</p>"
+nur_bild = false
+titel = "September 2022"
+[[abschnitte.eintrage]]
+bild = ""
 content = "<p>Fertigstellung des neuen Ausstellungsgebäude auf 132 qm mit Büro- und Personalraum<br>Sowie 2 Lagerhallen Abensberger Str. 13 Rohr/Bachl</p>"
 nur_bild = false
 titel = "Juli 2022"
