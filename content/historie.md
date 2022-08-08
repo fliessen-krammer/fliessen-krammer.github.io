@@ -104,6 +104,11 @@ nur_bild = false
 titel = "September 2022"
 [[abschnitte.eintrage]]
 bild = ""
+content = "<p>8 Facharbeiter, 1 Lehrling, 2 Büro, 1 Lagerist, 1 Meister</p>"
+nur_bild = false
+titel = "Juli 2022"
+[[abschnitte.eintrage]]
+bild = ""
 content = "<p>Fertigstellung des neuen Ausstellungsgebäude auf 132 qm mit Büro- und Personalraum<br>Sowie 2 Lagerhallen Abensberger Str. 13 Rohr/Bachl</p>"
 nur_bild = false
 titel = "Juli 2022"
