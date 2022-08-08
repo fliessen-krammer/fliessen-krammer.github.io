@@ -7,13 +7,12 @@ type = "page"
 weight = 2
 
 +++
-**Fliesen Krammer GmbH**  
-Gewerbestraße 1  
-D-93352 Rohr
+**Fliesen Krammer GmbH**
 
-Tel +49 (0) 8783 566  
-Fax +49 (0) 8783 91117
-
+Abensberger Str.13, D-93352 Rohr / Bachl  
+Tel. 08783/967998-0  
+Fax 08783/967998-9  
+Mobil 0160/7784488  
 E-Mail: [info@fliesen-krammer.de](mailto:info@fliesen-krammer.de)  
 Internet: www.fliesen-krammer.de
 
