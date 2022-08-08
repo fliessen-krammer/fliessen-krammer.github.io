@@ -1,7 +1,7 @@
 +++
 content = "<p>Hier finden Sie einen kleinen Auszug aus unseren langjährigen Firmenreferenzen. Wir bauen auf perfektes Handwerk und zu-</p><p>friedene Kunden. Jeder Kunde, jeder Raum hat seine eigenen Bedürfnisse, bei einem Vor-Ort-Termin können wir Sie am besten individuell beraten.</p><p>Auf den folgenden Seiten möchten wir Ihnen gerne ein paar Ideen für Ihre Raumgestaltung vorstellen:</p>"
 layout = "referenzen_landing"
-seo_description = "Referenzen für Fliesen lege arbeiten für Bad, Terrasse, Wohnräume und Gewerberäume"
+seo_description = "Referenzen für Fliesenlegearbeiten für Bad, Terrasse, Wohnräume und Gewerberäume"
 title = "Referenzen"
 untertitel = "<p>Unsere<br>Referenzen</p>"
 [menu.main]
