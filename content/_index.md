@@ -42,12 +42,12 @@ titel = "Gewerbe & Industrie"
 weight = 1
 [ueber_uns]
 bild = "/uploads/2020/08/04/team_neu.jpg"
-content = "<p>Unser Meisterfachbetrieb ist seit über 40 Jahren in Sachen Fliesen- und Natursteineverlegung tätig. Dabei legen wir als Familienunternehmen sehr viel Wert auf höchste Qualität und besten Service für den Kunden. Bei uns sind Sie in Sachen Fliesen- und Natursteine in guten Händen. Von der fachgerechten Verlegung in Meisterqualität über kompetente Beratung beim Kauf von Fliesenprodukten bis hin zu individuellen Pflegetipps.</p>"
+content = "<p>Unser Meisterfachbetrieb ist seit 1976 in Sachen Fliesen- und Natursteineverlegung tätig. Dabei legen wir als Familienunternehmen sehr viel Wert auf höchste Qualität und besten Service für den Kunden. Bei uns sind Sie in Sachen Fliesen- und Natursteine in guten Händen. Von der fachgerechten Verlegung in Meisterqualität über kompetente Beratung beim Kauf von Fliesenprodukten bis hin zu individuellen Pflegetipps.</p>"
 titel = "Fliesen Krammer in Rohr"
 untertitel = "Über uns"
 [ueber_uns.jahre]
 beschriftung = "Jahre"
-slogan = "<p>Ihr Meisterbetrieb mit mehr als 40 Jahren Erfahrung</p>"
+slogan = "<p>Ihr Meisterbetrieb seit 1976</p>"
 zahl = 40
 
 +++
