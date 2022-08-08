@@ -95,5 +95,17 @@ bild = "/uploads/2019/07/04/IMG_3193.JPG"
 content = ""
 nur_bild = true
 titel = ""
+[[abschnitte]]
+interne_bezeichnung = ""
+[[abschnitte.eintrage]]
+bild = ""
+content = "<p>Fertigstellung des neuen Ausstellungsgebäude auf 132 qm mit Büro- und Personalraum<br>Sowie 2 Lagerhallen Abensberger Str. 13 Rohr/Bachl</p>"
+nur_bild = false
+titel = "Juli 2022"
+[[abschnitte.eintrage]]
+bild = ""
+content = "<p>Grundstückskauf und Baubeginn des neuen Firmensitzes in Rohr/Bachl</p>"
+nur_bild = false
+titel = "2021"
 
 +++
