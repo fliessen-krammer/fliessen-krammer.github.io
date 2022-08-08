@@ -99,11 +99,6 @@ titel = ""
 interne_bezeichnung = ""
 [[abschnitte.eintrage]]
 bild = ""
-content = ""
-nur_bild = false
-titel = ""
-[[abschnitte.eintrage]]
-bild = ""
 content = "<p>Planung für neues Betriebsgelände</p><p><br><br></p>"
 nur_bild = false
 titel = "2020"
@@ -117,11 +112,6 @@ bild = ""
 content = "<p>Fertigstellung des neuen Ausstellungsgebäude auf 132 qm mit Büro- und Personalraum, sowie 2 Lagerhallen Abensberger Str. 13 Rohr/Bachl</p><p>8 Facharbeiter, 1 Lehrling, 2 Büro, 1 Lagerist, 1 Meister</p>"
 nur_bild = false
 titel = "Sommer 2022"
-[[abschnitte.eintrage]]
-bild = ""
-content = "<p></p>"
-nur_bild = false
-titel = "Juli 2022"
 [[abschnitte.eintrage]]
 bild = ""
 content = "<p>Grundstückskauf und Baubeginn des neuen Firmensitzes in Rohr/Bachl</p><p>Erfolgreicher Abschluss von Sohn Jonas Krammer zum Fliesen- Platten- und Mosaikleger im Januar 2021</p>"
