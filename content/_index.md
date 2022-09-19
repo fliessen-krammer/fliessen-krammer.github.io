@@ -46,8 +46,8 @@ content = "<p>Unser Meisterfachbetrieb ist seit 1976 in Sachen Fliesen- und Natu
 titel = "Fliesen Krammer in Rohr"
 untertitel = "Über uns"
 [ueber_uns.jahre]
-beschriftung = "Jahre"
+beschriftung = "seit"
 slogan = "<p>Ihr Meisterbetrieb seit 1976</p>"
-zahl = 40
+zahl = 1976
 
 +++
