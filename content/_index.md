@@ -1,6 +1,6 @@
 +++
 seo_description = "Fliesen Krammer in Rohr  - Meisterfachbetrieb ist seit über 40 Jahren in Sachen Fliesen- und Natursteineverlegung tätig. Dabei legen wir als Familienunternehmen sehr viel Wert auf höchste Qualität und besten Service für den Kunden. Bei uns sind Sie in Sachen Fliesen- und Natursteine in guten Händen. Von der fachgerechten Verlegung in Meisterqualität über kompetente Beratung beim Kauf von Fliesenprodukten bis hin zu individuellen Pflegetipps."
-slider = ["/uploads/2022/09/29/banner.jpg", "/uploads/2022/09/14/img_7588.jpeg", "/uploads/2022/09/14/img_7585.jpeg", "/uploads/2022/09/14/img_7586.jpeg", "/uploads/2022/09/14/img_7583.jpeg", "/uploads/2022/09/14/img_7582.jpeg", "/uploads/2022/09/14/img_7589.jpeg"]
+slider = ["/uploads/2022/09/14/img_7588.jpeg", "/uploads/2022/09/14/img_7585.jpeg", "/uploads/2022/09/14/img_7586.jpeg", "/uploads/2022/09/14/img_7583.jpeg", "/uploads/2022/09/14/img_7582.jpeg", "/uploads/2022/09/14/img_7589.jpeg"]
 title = "Home"
 type = "page"
 [aktuelle_projekte]
