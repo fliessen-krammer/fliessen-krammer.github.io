@@ -6,7 +6,8 @@ email: <p><a href="mailto:info@fliesen-krammer.de" title="">info@fliesen-krammer
 icon_email: "/uploads/2019/06/15/icon_mail.png"
 tel: "<p>0 87 83 - 967 99 80</p>"
 icon_tel: "/uploads/2019/06/15/icon-tel.png"
-adresse: "<p>Abensberger Str. 13<br>D-93352 Rohr / Bachl</p>"
+adresse: "<p>Abensberger Str. 13<br>D-93352 Rohr / Bachl</p><p><strong>Unsere Ausstellung
+  ist barrierefrei!</strong></p>"
 icon_adresse: "/uploads/2019/06/15/icon_adresse.png"
 
 ---
